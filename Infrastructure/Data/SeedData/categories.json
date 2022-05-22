@@ -1,0 +1,42 @@
+[
+    {
+        "Id": 1,
+        "Name": "Emlak",
+        "Description": "konut, iş yeri, arsa, bina, turistik tesisler"
+    },
+    {
+        "Id": 2,
+        "Name": "Vasıta",
+        "Description": "otomobil, arazi, suv & pickup, motosiklet, ticari araçlar, kiralık araçlar, hasarlı araçlar"
+    },
+    {
+        "Id": 3,
+        "Name": "Aksesuar, Donanım & Tuning",
+        "Description": "otomotiv ekipmanları, motosiklet ekipmanları, deniz aracı ekipmanları"
+    },
+    {
+        "Id": 4,
+        "Name": "Elektronik",
+        "Description": "bilgisayar, cep telefonu, fotograf ve kamera, saat, oyun ve konsol, elektrikli ev aletleri"
+    },
+    {
+        "Id": 5,
+        "Name": "İş Makineleri & Sanayi",
+        "Description": "iş makineleri, tarım makineleri, sanayi, elektrik ve enerji"
+    },
+    {
+        "Id": 6,
+        "Name": "Özel Ders Verenler",
+        "Description": "lise & üniversite, ilkokul & ortaokul, yabancı dil"
+    },
+    {
+        "Id": 7,
+        "Name": "İş İlanları",
+        "Description": "avukatlık, eğitim, eğlence ve aktiviteler, güzellik ve bakım, It ve yazılım geliştirme, insan kaynakları"
+    },
+    {
+        "Id": 8,
+        "Name": "Hayvanlar Alemi",
+        "Description": "evcil, akvaryum, aksesuarlar, bakım ürünleri, kümes hayvanları, yem & mama, büyükbaş ve küçükbaş hayvanlar"
+    }
+]
