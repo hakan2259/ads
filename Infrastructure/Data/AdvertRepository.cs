@@ -2,25 +2,31 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Core.Entities;
 using Core.Interfaces;
+using Core.Specifications;
 using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Data
 {
-    public class AdvertRepository : IAdvertRepository
+    public class AdvertRepository : IGenericRepository<Advert>, IAdvertRepository
     {
-        private readonly AdsContext _context;
-        public AdvertRepository(AdsContext context)
+        public Task<Advert> GetByIdAsync(int id)
         {
-            _context = context;
+            throw new System.NotImplementedException();
         }
-        public async Task<Advert> GetAdvertByIdAsync(int id)
+
+        public Task<Advert> GetEntityWithSpec(ISpecification<Advert> spec)
         {
-            return await _context.Adverts.FindAsync(id);
+            throw new System.NotImplementedException();
         }
-        public async Task<IReadOnlyList<Advert>> GetAdvertsAsync()
+
+        public Task<IReadOnlyList<Advert>> ListAllAsync()
         {
-            return await _context.Adverts
-            .ToListAsync();
+            throw new System.NotImplementedException();
+        }
+
+        public Task<IReadOnlyList<Advert>> ListAsync(ISpecification<Advert> spec)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

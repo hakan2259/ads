@@ -6,11 +6,12 @@ namespace Infrastructure.Data
 {
     public class AdsContext : DbContext
     {
-        public AdsContext(DbContextOptions<AdsContext> options): base(options)
+        public AdsContext(DbContextOptions<AdsContext> options) : base(options)
         {
-            
+
         }
-        protected override void OnModelCreating(ModelBuilder modelBuilder){
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
 
             modelBuilder.Entity<Advert>().Property(a => a.Id).IsRequired();
             modelBuilder.Entity<Advert>().Property(a => a.Title).IsRequired().HasMaxLength(100);
@@ -23,16 +24,10 @@ namespace Infrastructure.Data
             modelBuilder.Entity<Category>().Property(c => c.Name).IsRequired().HasMaxLength(100);
             modelBuilder.Entity<Category>().Property(c => c.Description).HasMaxLength(250);
 
-            modelBuilder.Entity<AdvertCategory>()
-            .HasKey(ac => new {ac.CategoryId,ac.AdvertId});
-            modelBuilder.Entity<AdvertCategory>()
-            .HasOne(ac => ac.Advert)
-            .WithMany(a => a.AdvertCategories)
-            .HasForeignKey(ac => ac.AdvertId);
-            modelBuilder.Entity<AdvertCategory>()
-            .HasOne(ac => ac.Category)
-            .WithMany(c => c.AdvertCategories)
-            .HasForeignKey(ac => ac.CategoryId);
+            modelBuilder.Entity<Advert>()
+            .HasOne(c => c.Category)
+            .WithMany()
+            .HasForeignKey(cid => cid.CategoryId);
         }
         public DbSet<Advert> Adverts { get; set; }
         public DbSet<Category> Categories { get; set; }

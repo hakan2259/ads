@@ -10,14 +10,14 @@ namespace API.Controllers
     [Route("api/[controller]")]
     public class CategoriesController : ControllerBase
     {
-        private readonly ICategoryRepository _repository;
-        public CategoriesController(ICategoryRepository repository)
+        private readonly IGenericRepository<Category> _categoryRepo;
+        public CategoriesController(ICategoryRepository categoryRepo)
         {
-            _repository = repository;
+            _categoryRepo = categoryRepo;
         }
         [HttpGet]
         public async Task<ActionResult<IReadOnlyList<Category>>> GetCategories(){
-            return Ok(await _repository.GetCategoriesAsync());
+            return Ok(await _categoryRepo.ListAllAsync());
         }
     }
 }

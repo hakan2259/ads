@@ -4,11 +4,8 @@ using Core.Entities;
 
 namespace Core.Interfaces
 {
-    public interface IAdvertRepository
+    public interface IAdvertRepository:IGenericRepository<Advert>
     {
-         Task<Advert> GetAdvertByIdAsync(int id);
-         Task<IReadOnlyList<Advert>> GetAdvertsAsync();
          
-
     }
 }

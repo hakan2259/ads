@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Data.Migrations
 {
     [DbContext(typeof(AdsContext))]
-    [Migration("20220522065439_InitialCreate")]
+    [Migration("20220524140637_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -31,6 +31,9 @@ namespace Infrastructure.Data.Migrations
 
                     b.Property<DateTime>("AdvertDate")
                         .HasColumnType("TEXT");
+
+                    b.Property<int>("CategoryId")
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Description")
                         .IsRequired()
@@ -54,22 +57,9 @@ namespace Infrastructure.Data.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("CategoryId");
+
                     b.ToTable("Adverts");
-                });
-
-            modelBuilder.Entity("Core.Entities.AdvertCategory", b =>
-                {
-                    b.Property<int>("CategoryId")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("AdvertId")
-                        .HasColumnType("INTEGER");
-
-                    b.HasKey("CategoryId", "AdvertId");
-
-                    b.HasIndex("AdvertId");
-
-                    b.ToTable("AdvertCategory");
                 });
 
             modelBuilder.Entity("Core.Entities.Category", b =>
@@ -92,16 +82,10 @@ namespace Infrastructure.Data.Migrations
                     b.ToTable("Categories");
                 });
 
-            modelBuilder.Entity("Core.Entities.AdvertCategory", b =>
+            modelBuilder.Entity("Core.Entities.Advert", b =>
                 {
-                    b.HasOne("Core.Entities.Advert", "Advert")
-                        .WithMany("AdvertCategories")
-                        .HasForeignKey("AdvertId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("Core.Entities.Category", "Category")
-                        .WithMany("AdvertCategories")
+                        .WithMany()
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();

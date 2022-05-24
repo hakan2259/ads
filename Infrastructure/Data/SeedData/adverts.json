@@ -3,80 +3,88 @@
         "Id": 1,
         "Title": "SON FIRSAT YÜKSEK GİRİŞ",
         "Price": 425000,
-        "PictureUrl": "https://i0.shbdn.com/photos/16/90/44/x5_992169044w2s.jpg",
+        "PictureUrl": "images/adverts/1.jpg",
         "Address": "Kastamonu / Merkez",
         "Description": "SON DAİRE 1. SINIF YAPI KULLANIŞLI",
         "IsApproved": true,
-        "AdvertDate": "2019-01-06T17:16:40"
+        "AdvertDate": "2019-01-06T17:16:40",
+        "CategoryId": 1
     },
     {
         "Id": 2,
         "Title": "Sahibinden Cadde Üzerinde Köşe Başı Ara Kat 5+1 Ultra Lüks Daire",
         "Price": 2880000,
-        "PictureUrl": "https://i0.shbdn.com/photos/34/49/65/x5_1018344965ved.jpg",
+        "PictureUrl": "images/adverts/2.jpg",
         "Address": "İstanbul / Kartal",
         "Description": "SAHİBİNDEN CADDE ÜZERİNDE ÖNÜ AÇIK ULAŞIM NOKTASININ YANI BAŞINDA",
         "IsApproved": true,
-        "AdvertDate": "2019-01-06T17:16:40"
+        "AdvertDate": "2019-01-06T17:16:40",
+        "CategoryId": 1
     },
     {
         "Id": 3,
         "Title": "Otomatik 7 ileri orjinal caddy",
         "Price": 300000,
-        "PictureUrl": "https://i0.shbdn.com/photos/07/22/94/x5_1023072294v5d.jpg",
+        "PictureUrl": "images/adverts/3.jpg",
         "Address": "Rize / Ardeşen",
         "Description": "Orjinal araçtır, Yakıt cimrisidir",
         "IsApproved": true,
-        "AdvertDate": "2019-01-06T17:16:40"
+        "AdvertDate": "2019-01-06T17:16:40",
+        "CategoryId": 2
     },
     {
         "Id": 4,
         "Title": "E220d EXCLUSİVE 9G-TRONİC COMAND VAKUM ELEK.BAGAJ ELEK. PERDE",
         "Price": 1650000,
-        "PictureUrl": "https://i0.shbdn.com/photos/18/31/72/x5_10251831721fv.jpg",
+        "PictureUrl": "images/adverts/4.jpg",
         "Address": "İzmir / Gaziemir",
         "Description": "MERCEDES-BENZ E220d EXCLUSİVE 9G-TRONİC F1 VİTES",
         "IsApproved": true,
-        "AdvertDate": "2019-01-06T17:16:40"
+        "AdvertDate": "2019-01-06T17:16:40",
+        "CategoryId": 2
     },
     {
         "Id": 5,
         "Title": "ACİLL SATILIK HP 255 G8 NOTEBOOK PC",
         "Price": 6000,
-        "PictureUrl": "https://i0.shbdn.com/photos/89/84/86/x5_1026898486vab.jpg",
+        "PictureUrl": "images/adverts/5.jpg",
         "Address": "Antalya / Konyaaltı",
         "Description": "Acil satılık olduğu için bu fiyata kısa süreli satışta",
         "IsApproved": true,
-        "AdvertDate": "2019-01-06T17:16:40"
+        "AdvertDate": "2019-01-06T17:16:40",
+        "CategoryId": 4
     },
     {
         "Id": 6,
         "Title": "iPhone 13 ProMax 256GB - Hızlı Şarj, Kılıf, Kamera ve Cam Koruma",
         "Price": 27750,
-        "PictureUrl": "https://i0.shbdn.com/photos/09/64/95/x5_10260964957wp.jpg",
+        "PictureUrl": "images/adverts/6.jpg",
         "Address": "İzmir / Buca",
         "Description": "Ürünü ilk çıktığı gün Tarhan GSM den satın aldım. Ürün kutu, kablosu ve faturasıyla teslim edilecektir.",
         "IsApproved": true,
-        "AdvertDate": "2019-01-06T17:16:40"
+        "AdvertDate": "2019-01-06T17:16:40",
+        "CategoryId": 4
     },
     {
         "Id": 7,
         "Title": "Son İngilizce Öğretmeniniz İngilizce Konuşma Dersleri Özel Ders",
         "Price": 1050,
-        "PictureUrl": "https://i0.shbdn.com/photos/72/94/37/x5_1013729437te5.jpg",
+        "PictureUrl": "images/adverts/7.jpg",
         "Address": "İstanbul / Üsküdar",
         "Description": "Her bir derste gündelik hayatta en sık kullanılan 200'den fazla cümle konuşmanıza yardımcı oluyorum.",
         "IsApproved": true,
-        "AdvertDate": "2019-01-06T17:16:40"
+        "AdvertDate": "2019-01-06T17:16:40",
+        "CategoryId": 6
     },
     {
         "Id": 8,
         "Title": "%100 Konuşma Garantili Bire Bir İngilizce Özel Ders",
         "Price": 90000,
-        "PictureUrl": "https://i0.shbdn.com/photos/41/29/55/x5_269412955ncf.jpg",
+        "PictureUrl": "images/adverts/8.jpg",
         "Address": "İstanbul / Bağcılar",
         "Description": "Her bir derste gündelik hayatta en sık kullanılan 200'den fazla cümle konuşmanıza yardımcı oluyorum.",
         "IsApproved": true,
-        "AdvertDate": "2019-01-06T17:16:40"
+        "AdvertDate": "2019-01-06T17:16:40",
+        "CategoryId": 6
     }
 ]
