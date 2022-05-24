@@ -2,7 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using API.Errors;
+using API.Extensions;
 using API.Helpers;
+using API.Middleware;
 using AutoMapper;
 using Core.Interfaces;
 using Infrastructure.Data;
@@ -15,6 +18,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.OpenApi.Models;
 
 namespace API
 {
@@ -34,25 +38,28 @@ namespace API
             .AddNewtonsoftJson(options =>
             options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
 );
-            services.AddScoped<ICategoryRepository, CategoryRepository>();
-           // services.AddScoped<IAdvertRepository,AdvertRepository>();
-            services.AddScoped(typeof(IGenericRepository<>),(typeof(GenericRepository<>)));
+
             services.AddAutoMapper(typeof(MappingProfiles));
-            
-            
+
+
             services.AddControllers();
             services.AddDbContext<AdsContext>(x => x.UseSqlite(Configuration.GetConnectionString("DefaultConnecion")));
+
+            services.AddApplicationServices();
+            services.AddSwaggerDocumentation();
+            
 
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.UseMiddleware<ExceptionMiddleware>();
             if (env.IsDevelopment())
             {
-                app.UseDeveloperExceptionPage();
+                app.UseSwaggerDocumentation();
             }
-
+            app.UseStatusCodePagesWithReExecute("/errors/{0}");
             //app.UseHttpsRedirection();
 
             app.UseRouting();
