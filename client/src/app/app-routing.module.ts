@@ -1,12 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AdsComponent } from './ads/ads.component';
-import { AdvertDetailsComponent } from './ads/advert-details/advert-details.component';
+import { NotFoundComponent } from './core/not-found/not-found.component';
+import { ServerErrorComponent } from './core/server-error/server-error.component';
+import { TestErrorComponent } from './core/test-error/test-error.component';
 import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  {path : 'ads', loadChildren: () => import('./ads/ads.module').then(mod => mod.AdsModule)},
+  { path: 'test-error', component: TestErrorComponent },
+  { path: 'server-error', component: ServerErrorComponent },
+  { path: 'not-found', component: NotFoundComponent },
+  {
+    path: 'ads',
+    loadChildren: () => import('./ads/ads.module').then((mod) => mod.AdsModule),
+  },
   { path: '**', redirectTo: '', pathMatch: 'full' },
 ];
 
