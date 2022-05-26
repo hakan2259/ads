@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AdsComponent } from './ads.component';
 import { AdvertItemComponent } from './advert-item/advert-item.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -11,7 +12,8 @@ import { AdvertItemComponent } from './advert-item/advert-item.component';
     AdvertItemComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    SharedModule
   ],
   exports: [AdsComponent]
 })

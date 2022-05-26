@@ -11,7 +11,7 @@ namespace API.Controllers
     public class CategoriesController : ControllerBase
     {
         private readonly IGenericRepository<Category> _categoryRepo;
-        public CategoriesController(ICategoryRepository categoryRepo)
+        public CategoriesController(IGenericRepository<Category> categoryRepo)
         {
             _categoryRepo = categoryRepo;
         }
