@@ -18,6 +18,9 @@ export class AdsService {
     if (adsParams.categoryId !== 0) {
       params = params.append('categoryId', adsParams.categoryId.toString());
     }
+   if(adsParams.search){
+     params = params.append('search',adsParams.search);
+   }
 
     params = params.append('sort', adsParams.sort);
     params = params.append('pageIndex', adsParams.pageNumber.toString());

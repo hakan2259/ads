@@ -29,24 +29,24 @@
   </section>
 
   <section class="col-9">
-    <div class="d-flex justify-content-between align-items-center pb-2">
+    <div class="d-flex justify-content-between align-items-center mb-3">
       <header>
         <span>Anasayfa Vitrini</span>
       </header>
 
-      <form class="d-flex" role="search">
+      <div class="d-flex form-inline" role="search">
         <input
+        (keyup.enter)="onSearch()"
           class="form-control me-2"
-          type="search"
           placeholder="Search"
-          aria-label="Search"
           style="width: 300px"
+          #search
         />
-        <button class="btn btn-outline-primary me-2" type="submit">
+        <button class="btn btn-outline-primary me-2"  (click)="onSearch()">
           <i class="fa fa-search"></i>
         </button>
-        <button class="btn btn-outline-success">Reset</button>
-      </form>
+        <button (click)="onReset()" class="btn btn-outline-success">Reset</button>
+      </div>
     </div>
 
     <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 g-3 mb-3">
