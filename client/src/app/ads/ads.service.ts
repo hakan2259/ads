@@ -4,6 +4,7 @@ import { ICategory } from '../shared/models/category';
 import { IPagination } from '../shared/models/pagination';
 import { delay, map } from 'rxjs/operators';
 import { AdsParams } from '../shared/models/adsParams';
+import { IAdvert } from '../shared/models/advert';
 
 @Injectable({
   providedIn: 'root',
@@ -36,6 +37,9 @@ export class AdsService {
           return response.body;
         })
       );
+  }
+  getAdvert(id:number){
+    return this.http.get<IAdvert>(this.baseUrl + "adverts/" +id);
   }
   getCategories() {
     return this.http.get<ICategory[]>(this.baseUrl + 'categories');

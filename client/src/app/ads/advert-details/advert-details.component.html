@@ -1,0 +1,18 @@
+<div class="row" *ngIf="advert">
+  <div class="col-6">
+    <img src="{{advert.pictureUrl}}" alt="{{advert.title}}" class="img-fluid">
+  </div>
+  <div class="col-6">
+    <h3>{{advert.title}}</h3>
+    <p>{{advert.price | currency}}</p>
+    <div>
+      <button class="btn btn-outline-secondary btn-lg">Add to Favorites</button>
+    </div>
+  </div>
+  <div class="row mt-5">
+    <div class="col-12 ml-3">
+      <h4>Description</h4>
+      <p>{{advert.description}}</p>
+    </div>
+  </div>
+</div>

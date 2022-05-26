@@ -1,8 +1,8 @@
 <div class="card h-100 shadow-sm">
-  <img src="{{ advert.pictureUrl }}" alt="{{ advert.title }}" class="img-fluid bg-info"/>
+  <a routerLink="/ads/{{advert.id}}"><img src="{{ advert.pictureUrl }}" alt="{{ advert.title }}" class="img-fluid bg-info"/></a>
 
   <div class="card-body d-flex flex-column">
-    <a href="#">
+    <a routerLink="/ads/{{advert.id}}">
       <h6 class="text-uppercase">{{ advert.title }}</h6>
     </a>
     <span class="mb-2">{{ advert.price | currency }}</span>
